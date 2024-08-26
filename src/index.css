@@ -1,0 +1,22 @@
+/* Container for perspective */
+.container {
+  perspective: 1000px; /* Controls the intensity of the 3D effect */
+}
+
+.movie-card {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  transform-style: preserve-3d; /* Ensures children elements are affected by 3D transforms */
+}
+
+.movie-card:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Adjusted box-shadow for a more pronounced effect */
+}
+
+.movie-card img {
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover img {
+  opacity: 0.9;
+}
